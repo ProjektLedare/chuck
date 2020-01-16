@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Login med panorama</h1>
+<!--
+
+<style type="text/css">
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .h3  {
+    text-align: center;
+  }
+</style>
+
+<form class="form-signin" method="post">{% csrf_token %}
+  <div class="d-flex flex-column pb-3">
+    <img class="img-fluid mx-auto d-block" src="{% static 'img\hus720.png' %}" alt="bild på hus" width="72" height="72">
+  </div>
+  
+  <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+  
+  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+  
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+
+</form>
+
+
+<div class="container" style="background-color:#fff; border:2px;">
+{% for item in items %}
+	<div style="padding-left:200px;">
+	<img src="{{item.img.url}}" width="120" height="120" alt="DB bild">
+	<p>{{item.name}}</p>
+	
+	</div>
+{% endfor %}
+
+{% include "pagination.html "%}
+
+</div>
+-->
+<!--
+<iframe width="400" height="225" frameborder="0" allowfullscreen src="https://panopdm.com/viewer.php?application=panorama&id=c7cb773e32456cab8a494c3ed9c055147d5af64b"></iframe>
+-->
+<!--	<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="ren" allowfullscreen></iframe>
+</div> -->
+{% endblock content %}
